@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_reusable_media_sections",
+  "info": {
+    "displayName": "MediaSection"
+  },
+  "options": {},
+  "attributes": {
+    "media1": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "media2": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "media1_position": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ]
+    }
+  },
+  "config": {}
+}

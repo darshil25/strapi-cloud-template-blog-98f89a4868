@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Course"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "title": {
+      "type": "string"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        "professional"
+      ]
+    },
+    "modules": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::module.module",
+      "inversedBy": "courses"
+    },
+    "course_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course-category.course-category",
+      "mappedBy": "courses"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "courses"
+    },
+    "chapters": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::chapter.chapter",
+      "mappedBy": "courses"
+    }
+  }
+}

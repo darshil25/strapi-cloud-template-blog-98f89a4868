@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_reusable_heading_blocks",
+  "info": {
+    "displayName": "HeadingBlock"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
