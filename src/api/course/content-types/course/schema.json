@@ -15,7 +15,20 @@
       "type": "uid",
       "targetField": "title"
     },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "title": {
+      "type": "string"
+    },
+    "description": {
       "type": "string"
     },
     "level": {
@@ -26,6 +39,9 @@
         "advanced",
         "professional"
       ]
+    },
+    "about": {
+      "type": "blocks"
     },
     "modules": {
       "type": "relation",

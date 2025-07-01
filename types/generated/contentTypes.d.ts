@@ -386,10 +386,13 @@ export interface ApiChapterChapter extends Struct.CollectionTypeSchema {
   attributes: {
     content_blocks: Schema.Attribute.DynamicZone<
       [
-        'reusable.image-text-block',
-        'reusable.media-section',
+        'reusable.youtube-video',
+        'reusable.single-media-block',
         'reusable.rich-text-block',
         'reusable.quote-block',
+        'reusable.multi-media-block',
+        'reusable.media-section',
+        'reusable.image-text-block',
         'reusable.heading-block',
       ]
     >;
@@ -456,6 +459,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    about: Schema.Attribute.Blocks;
     chapters: Schema.Attribute.Relation<'manyToMany', 'api::chapter.chapter'>;
     course_categories: Schema.Attribute.Relation<
       'manyToMany',
@@ -464,6 +468,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.String;
     level: Schema.Attribute.Enumeration<
       ['beginner', 'intermediate', 'advanced', 'professional']
     >;
@@ -477,6 +482,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
+    thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

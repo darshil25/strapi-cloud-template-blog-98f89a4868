@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_reusable_youtube_videos",
+  "info": {
+    "displayName": "YoutubeVideo"
+  },
+  "options": {},
+  "attributes": {
+    "youtubeVideoUrl": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

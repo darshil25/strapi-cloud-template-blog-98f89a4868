@@ -22,10 +22,13 @@
     "content_blocks": {
       "type": "dynamiczone",
       "components": [
-        "reusable.image-text-block",
-        "reusable.media-section",
+        "reusable.youtube-video",
+        "reusable.single-media-block",
         "reusable.rich-text-block",
         "reusable.quote-block",
+        "reusable.multi-media-block",
+        "reusable.media-section",
+        "reusable.image-text-block",
         "reusable.heading-block"
       ]
     },
