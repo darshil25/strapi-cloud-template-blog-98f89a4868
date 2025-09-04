@@ -66,6 +66,13 @@
       "relation": "manyToMany",
       "target": "api::chapter.chapter",
       "mappedBy": "courses"
+    },
+    "is_ultra": {
+      "type": "boolean",
+      "default": false
+    },
+    "course_duration": {
+      "type": "integer"
     }
   }
 }

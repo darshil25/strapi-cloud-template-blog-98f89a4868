@@ -465,10 +465,12 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::course-category.course-category'
     >;
+    course_duration: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.String;
+    is_ultra: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     level: Schema.Attribute.Enumeration<
       ['beginner', 'intermediate', 'advanced', 'professional']
     >;
